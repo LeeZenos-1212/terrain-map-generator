@@ -1,1 +1,53 @@
+# Codex/local collaboration files
+AGENTS.md
+.agents/
+.codex/
+
+# Project-local tools
 .tools/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+
+# Generated terrain output
+output/
+
+# Coverage, logs, and temporary files
+.coverage
+.coverage.*
+htmlcov/
+*.log
+*.tmp
+*.temp
+
+# Notebook and editor state
+.ipynb_checkpoints/
+.idea/
+.vscode/
+*.code-workspace
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
