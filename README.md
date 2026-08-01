@@ -85,12 +85,12 @@ heightmap: numpy.ndarray  # shape = (height, width), value = 0.0 ~ 1.0
 
 任务：
 
-- [ ] 创建基础目录结构。
-- [ ] 添加依赖清单。
-- [ ] 建立统一配置对象，集中管理随机种子和生成参数。
-- [ ] 建立命令行入口 `main.py`。
-- [ ] 创建输出目录管理规则。
-- [ ] 添加最基本的运行说明。
+- [X] 创建基础目录结构。
+- [X] 添加依赖清单。
+- [X] 建立统一配置对象，集中管理随机种子和生成参数。
+- [X] 建立命令行入口 `main.py`。
+- [X] 创建输出目录管理规则。
+- [X] 添加最基本的运行说明。
 
 产物：
 
@@ -102,6 +102,34 @@ heightmap: numpy.ndarray  # shape = (height, width), value = 0.0 ~ 1.0
 
 - 能从项目根目录运行 `python main.py`。
 - 缺少依赖或参数错误时能够给出明确提示。
+
+快速开始（在项目根目录的 PowerShell 中运行）：
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python main.py --seed 42
+```
+
+如果已经安装 Python 3.12，但当前 PowerShell 无法识别 `python` 或 `py`，可用默认的按用户安装路径创建虚拟环境：
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe" -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+阶段 0 会创建 `output/<seed>/metadata.json`。查看所有可用参数：
+
+```powershell
+python main.py --help
+```
+
+运行当前测试：
+
+```powershell
+python -m unittest discover -s tests -v
+```
 
 ### 阶段 1：基础高度场生成
 
