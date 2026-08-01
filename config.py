@@ -12,6 +12,7 @@ class TerrainConfig:
     seed: int = 42
     width: int = 512
     height: int = 512
+    base_frequency: int = 2
     octaves: int = 6
     persistence: float = 0.5
     lacunarity: float = 2.0
@@ -19,6 +20,8 @@ class TerrainConfig:
     def __post_init__(self) -> None:
         if self.width <= 0 or self.height <= 0:
             raise ValueError("width and height must be positive integers")
+        if self.base_frequency <= 0:
+            raise ValueError("base_frequency must be a positive integer")
         if self.octaves <= 0:
             raise ValueError("octaves must be a positive integer")
         if not 0.0 < self.persistence <= 1.0:

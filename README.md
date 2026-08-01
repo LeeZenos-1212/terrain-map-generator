@@ -135,20 +135,22 @@ python -m unittest discover -s tests -v
 
 目标：使用多尺度噪声生成可复现的基础地形。
 
+状态：已于 2026-08-01 完成。
+
 任务：
 
-- [ ] 接入二维 Perlin 或分形噪声。
-- [ ] 支持随机种子。
-- [ ] 支持分辨率、基础频率和噪声层数配置。
-- [ ] 支持 `octaves`、`persistence` 和 `lacunarity` 参数。
-- [ ] 将输出归一化到 `0.0 ~ 1.0`。
-- [ ] 使用 `float32` 保存高度场，控制内存和文件大小。
-- [ ] 将原始高度场保存为 `.npy`。
+- [x] 接入二维 Perlin 或分形噪声。
+- [x] 支持随机种子。
+- [x] 支持分辨率、基础频率和噪声层数配置。
+- [x] 支持 `octaves`、`persistence` 和 `lacunarity` 参数。
+- [x] 将输出归一化到 `0.0 ~ 1.0`。
+- [x] 使用 `float32` 保存高度场，控制内存和文件大小。
+- [x] 将原始高度场保存为 `.npy`。
 
 产物：
 
 - `output/<seed>/heightmap.npy`
-- 基础灰度高度图预览
+- `output/<seed>/heightmap_preview.png`
 
 验收标准：
 
